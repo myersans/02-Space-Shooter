@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player/pitrizzo-SpaceShip-gpl3-opengameart-24x24.png" type="Texture" id=1]
+[ext_resource path="res://Assets/thrust.png" type="Texture" id=2]
+[ext_resource path="res://Player/Player.gd" type="Script" id=3]
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 512, 300 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Thrust" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 50 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2( 2.6974, -1.19209e-05 )
+scale = Vector2( 1.67237, 1.23545 )
+polygon = PoolVector2Array( 5, -25.2, 5, -21.4, 20.9, 19, 17.5, 19, -4, 29.2, -4, 26.2, -20, 18.2, -20, 13.6, -3, -25.3, -3, -29.2 )
